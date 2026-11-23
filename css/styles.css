@@ -2158,3 +2158,32 @@ body:has(#sikomang-home) {
     animation: none !important;
   }
 }
+/* =========================================================
+   PATCH TERISOLASI: TOMBOL NAVIGASI HP TETAP BIRU SAAT DISENTUH
+   Mencegah :hover sticky pada layar sentuh mengubah tombol menjadi
+   putih dengan teks putih yang tidak terbaca.
+   ========================================================= */
+@media (hover: none) and (pointer: coarse) {
+  .sikomang-top-link,
+  .sikomang-top-link:hover,
+  .sikomang-top-link:active,
+  .sikomang-top-link:focus,
+  .sikomang-top-link:focus-visible {
+    background: linear-gradient(
+      135deg,
+      rgba(30,126,177,.96),
+      rgba(68,166,207,.94),
+      rgba(20,101,146,.96)
+    ) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    transform: none !important;
+    box-shadow:
+      0 6px 17px rgba(7,54,83,.17),
+      0 0 12px rgba(44,151,198,.12) !important;
+  }
+
+  .sikomang-top-link {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
