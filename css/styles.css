@@ -2092,3 +2092,71 @@ body:has(#sikomang-home) {
     font-size: 8px !important;
   }
 }
+/* SIKOMANG — isolated typing-caret correction
+   Append this block to the END of css/styles.css. */
+@keyframes sikomangTitleRevealExact {
+  0% { clip-path: inset(0 100% 0 0); }
+  16.06% { clip-path: inset(0 0 0 0); }
+  84.86% { clip-path: inset(0 0 0 0); }
+  96.33% { clip-path: inset(0 100% 0 0); }
+  100% { clip-path: inset(0 100% 0 0); }
+}
+
+@keyframes sikomangTitleCaretTravel {
+  0% { left: 0; }
+  16.06% { left: 100%; }
+  84.86% { left: 100%; }
+  96.33% { left: 0; }
+  100% { left: 0; }
+}
+
+@keyframes sikomangTitleCaretBlink {
+  0%, 15.8%, 84.8%, 96.2%, 100% { opacity: 1; }
+  16.1%, 84.7%, 96.4% { opacity: 0; }
+  25%, 35%, 45%, 55%, 65%, 75% { opacity: 0; }
+  30%, 40%, 50%, 60%, 70%, 80% { opacity: 1; }
+}
+
+.sikomang-title {
+  position: relative !important;
+  display: inline-block !important;
+  width: max-content !important;
+  max-width: 100% !important;
+  overflow: visible !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  padding-right: 0 !important;
+  animation: none !important;
+}
+
+.sikomang-title-text {
+  display: inline-block !important;
+  white-space: nowrap !important;
+  clip-path: inset(0 100% 0 0);
+  animation: sikomangTitleRevealExact 21.8s cubic-bezier(.65,0,.35,1) .35s infinite;
+}
+
+.sikomang-title::after {
+  content: '';
+  position: absolute;
+  top: 3%;
+  left: 0;
+  height: 91%;
+  width: 2px;
+  background: rgba(18,101,142,.78);
+  pointer-events: none;
+  animation:
+    sikomangTitleCaretTravel 21.8s cubic-bezier(.65,0,.35,1) .35s infinite,
+    sikomangTitleCaretBlink .85s step-end infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sikomang-title-text {
+    clip-path: none !important;
+    animation: none !important;
+  }
+  .sikomang-title::after {
+    display: none !important;
+    animation: none !important;
+  }
+}
