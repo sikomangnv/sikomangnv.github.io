@@ -1,24 +1,19 @@
-# Migrasi Homescreen SIKOMANG ke GitHub Pages (versi paralel)
+# SIKOMANG GitHub Pages — Patch halaman legal & homescreen satu layar
 
-Paket ini adalah konversi awal dari XML Blogger yang diberikan. Blogger tetap berjalan dan tidak perlu dihapus atau diubah. Aplikasi utama tetap berada di https://sikomangnv.vercel.app/.
+## Isi
+- `index.html` — homescreen dengan tautan footer menuju halaman legal lokal.
+- `kebijakan-privasi.html` — halaman Kebijakan Privasi.
+- `syarat-dan-ketentuan.html` — halaman Syarat dan Ketentuan.
+- `css/styles.css` — stylesheet homescreen dan tambahan aturan satu layar.
 
-## Isi paket
-- `index.html` — homescreen SIKOMANG yang dikonversi dari struktur homepage XML.
-- `css/styles.css` — aturan CSS dari `<b:skin>` asli, dipertahankan; fragmen HTML yang terselip di blok CSS dibuang karena bukan aturan CSS.
+## Cara memasang
+1. Ekstrak ZIP.
+2. Salin seluruh isi folder hasil ekstrak (bukan folder induknya) ke root repository `sikomangnv.github.io`.
+3. Pilih Replace/Overwrite jika GitHub meminta konfirmasi.
+4. Commit changes.
+5. Tunggu GitHub Pages selesai deploy, lalu hard refresh `https://sikomangnv.github.io/` (Ctrl+F5).
 
-## Cara uji di GitHub Pages
-1. Buat repository GitHub, misalnya `sikomang-homescreen`.
-2. Upload seluruh isi folder ini ke root repository.
-3. Buka **Settings → Pages**.
-4. Pilih **Deploy from a branch**, branch `main`, folder `/ (root)`, lalu Save.
-5. Setelah GitHub Pages menerbitkan situs, buka URL yang diberikan GitHub dan bandingkan di desktop serta HP dengan Blogger.
-
-## Item yang masih perlu dilengkapi sebelum dianggap final
-1. Ganti `https://LINK-DOKUMENTASI-ANDA` dengan URL dokumentasi yang benar.
-2. Ganti domain contoh `GANTI-DENGAN-URL-BLOGGER-ANDA.blogspot.com` pada tautan Kebijakan Privasi dan Syarat & Ketentuan. Setelah konten asli kedua halaman diberikan/diekspor, tautan dapat diarahkan ke file statis GitHub agar semua halaman ikut pindah.
-3. Gambar/logo/background sementara tetap memakai URL `blogger.googleusercontent.com` yang sama seperti XML sumber. Ini menjaga tampilan dan menghindari perubahan aset saat tahap pertama. Aset dapat disalin ke folder `assets/` kemudian jika diinginkan.
-
-## Batasan konversi
-- Kode khusus Blogger (`b:if`, `b:section`, `Blog1`, `data:post.body`, komentar Blogger) tidak dipakai pada halaman statis GitHub.
-- Pengalihan `?m=0` khusus Blogger dihilangkan; layout responsif CSS asli tetap dipakai.
-- Tidak ada perubahan pada backend, database, autentikasi, atau aplikasi SIKOMANG di Vercel.
+## Catatan
+- Perubahan hanya untuk homescreen GitHub Pages dan dua halaman legal. Tidak mengubah aplikasi SIKOMANG di Vercel/Supabase atau Blogger.
+- Halaman dokumen legal tetap dapat discroll karena isinya panjang. Penguncian scroll vertikal hanya berlaku pada homescreen.
+- Pada layar yang sangat pendek atau zoom browser besar, konten mungkin perlu dikecilkan oleh browser; periksa desktop dan HP setelah deploy.

@@ -1912,3 +1912,111 @@ img {
   padding: 0;
 
 }
+
+
+/* =========================================================
+   PATCH TERISOLASI: HOMESCREEN SATU LAYAR (NO VERTICAL SCROLL)
+   Berlaku hanya untuk halaman utama; dokumen legal tetap dapat
+   discroll karena kontennya panjang.
+   ========================================================= */
+html:has(#sikomang-home),
+body:has(#sikomang-home) {
+  width:100%;
+  height:100%;
+  min-height:100%;
+  overflow:hidden !important;
+}
+body:has(#sikomang-home) {
+  overscroll-behavior:none;
+}
+#sikomang-home {
+  height:100vh;
+  height:100svh;
+  min-height:0 !important;
+  max-height:100vh;
+  max-height:100svh;
+  padding:clamp(66px, 10vh, 100px) 24px clamp(58px, 9vh, 82px) !important;
+  overflow:hidden !important;
+}
+.sikomang-inner {
+  max-height:100%;
+  display:flex;
+  align-items:center;
+}
+.sikomang-content {
+  max-width:min(650px, 100%);
+  max-height:100%;
+}
+.sikomang-logo-group {
+  margin-bottom:clamp(8px, 1.8vh, 18px) !important;
+}
+.sikomang-logo-karangasem,
+.sikomang-logo {
+  width:clamp(48px, 7vh, 75px) !important;
+  height:clamp(48px, 7vh, 75px) !important;
+}
+.sikomang-title {
+  font-size:clamp(27px, 4.2vh, 42px) !important;
+  line-height:1.08 !important;
+  margin-top:0 !important;
+  margin-bottom:clamp(4px, .9vh, 10px) !important;
+}
+.sikomang-subtitle {
+  font-size:clamp(12px, 1.8vh, 16px) !important;
+  line-height:1.35 !important;
+}
+.sikomang-description {
+  font-size:clamp(11px, 1.65vh, 14px) !important;
+  line-height:1.55 !important;
+  margin-top:clamp(7px, 1.4vh, 14px) !important;
+  margin-bottom:clamp(8px, 1.6vh, 16px) !important;
+}
+.sikomang-learning-info {
+  margin-top:clamp(8px, 1.4vh, 16px) !important;
+  margin-bottom:clamp(5px, .9vh, 10px) !important;
+  font-size:clamp(9px, 1.35vh, 12.5px) !important;
+}
+.sikomang-external-row {
+  margin-top:clamp(4px, .8vh, 8px) !important;
+}
+.sikomang-external-link {
+  min-height:clamp(34px, 5.6vh, 46px) !important;
+}
+.sikomang-top-navigation {
+  top:clamp(8px, 2vh, 20px) !important;
+  right:clamp(10px, 2vw, 25px) !important;
+}
+.sikomang-footer {
+  padding:8px 12px 10px !important;
+  font-size:9px !important;
+}
+.sikomang-secondary-row {
+  bottom:clamp(27px, 4.5vh, 42px) !important;
+}
+@media (max-width:760px) {
+  #sikomang-home {
+    padding:clamp(66px, 10vh, 88px) 12px clamp(62px, 9vh, 78px) !important;
+  }
+  .sikomang-inner { align-items:center; }
+  .sikomang-content { max-width:100%; }
+  .sikomang-logo-group { gap:9px !important; margin-bottom:7px !important; }
+  .sikomang-logo-karangasem,
+  .sikomang-logo { width:clamp(38px, 6vh, 54px) !important; height:clamp(38px, 6vh, 54px) !important; }
+  .sikomang-title { font-size:clamp(23px, 3.7vh, 31px) !important; }
+  .sikomang-subtitle { font-size:clamp(10px, 1.6vh, 13px) !important; }
+  .sikomang-description { font-size:clamp(9px, 1.45vh, 11px) !important; line-height:1.42 !important; }
+  .sikomang-learning-info { font-size:clamp(8px, 1.25vh, 10.5px) !important; line-height:1.32 !important; }
+  .sikomang-external-row { gap:4px !important; }
+  .sikomang-external-link { min-height:clamp(30px, 4.8vh, 38px) !important; padding:3px 5px !important; }
+  .sikomang-external-logo-wrap { flex-basis:23px !important; width:23px !important; height:23px !important; }
+  .sikomang-external-logo, .sikomang-kms-mark { width:18px !important; height:18px !important; }
+  .sikomang-external-name { font-size:clamp(7px, 1.05vh, 8px) !important; }
+  .sikomang-secondary-row { right:8px !important; bottom:clamp(28px, 4.8vh, 42px) !important; }
+}
+@media (max-height:620px) {
+  #sikomang-home { padding-top:58px !important; padding-bottom:52px !important; }
+  .sikomang-description { margin-top:5px !important; margin-bottom:5px !important; }
+  .sikomang-learning-info { margin-top:5px !important; margin-bottom:4px !important; }
+  .sikomang-logo-group { margin-bottom:4px !important; }
+  .sikomang-footer { padding:5px 8px !important; }
+}
