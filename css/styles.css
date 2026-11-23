@@ -1,0 +1,1914 @@
+/* =========================================================
+   SIKOMANG
+   FINAL BLOGGER TEMPLATE
+   HOMEPAGE + STATIC PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+
+  --navy: #073653;
+  --blue: #12658e;
+  --text: #203847;
+  --muted: #60717e;
+  --white: #ffffff;
+
+}
+
+
+/* =========================================================
+   GLOBAL RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+
+  width: 100%;
+
+  min-height: 100%;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  overflow-x: hidden !important;
+
+}
+
+body {
+
+  font-family:
+    Inter,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  color: var(--text);
+
+  background: #ffffff;
+
+  overflow-x: hidden !important;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* =========================================================
+   HIDE BLOGGER DEFAULT ELEMENTS
+   ========================================================= */
+
+#header,
+#sidebar,
+#footer,
+#profile-container,
+#powered-by,
+.navbar,
+.Attribution,
+.blog-pager,
+.feed-links,
+.post-footer,
+.date-header,
+.post-header,
+.post-timestamp,
+.post-icons,
+.comments,
+#comments,
+.comment-form,
+.comment-thread,
+.comment-block,
+.status-msg-wrap,
+.status-msg-border,
+.blog-feeds,
+.blog-feeds-container,
+.feed-links,
+.post-share-buttons,
+.share-buttons,
+.item-control,
+.quickedit,
+.quickedit-button,
+.blog-admin,
+.blog-admin-buttons,
+.archive-list,
+.widget-content > .clear {
+  display: none !important;
+}
+
+
+/* =========================================================
+   REMOVE BLOGGER DEFAULT SPACING
+   ========================================================= */
+
+#Blog1,
+#main,
+.main,
+.main-outer,
+.content-outer,
+.content-inner,
+.blog-posts,
+.blog-posts.hfeed {
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  border: 0 !important;
+
+  width: 100% !important;
+
+}
+
+
+/* =========================================================
+   HOMEPAGE TOP NAVIGATION
+   ========================================================= */
+
+.sikomang-top-navigation {
+
+  position: fixed;
+
+  top: 20px;
+
+  right: 25px;
+
+  z-index: 100;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+}
+
+.sikomang-top-link {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 38px;
+  padding: 0 16px;
+
+  border: 1px solid rgba(7,54,83,.22);
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(30,126,177,.92),
+      rgba(68,166,207,.88),
+      rgba(20,101,146,.92)
+    );
+
+  color: #ffffff !important;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .35px;
+  white-space: nowrap;
+
+  box-shadow:
+    0 6px 17px rgba(7,54,83,.17),
+    0 0 12px rgba(44,151,198,.12);
+
+  transition:
+    background .25s ease,
+    transform .25s ease,
+    box-shadow .25s ease,
+    filter .25s ease;
+
+  animation: sikomangAiPulse 3.8s ease-in-out infinite;
+  will-change: transform, box-shadow;
+}
+
+.sikomang-top-link:hover {
+
+  background:
+    rgba(255,255,255,.96);
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 8px 20px
+    rgba(7,54,83,.13);
+
+}
+
+
+/* =========================================================
+   HOMEPAGE
+   ========================================================= */
+
+#sikomang-home {
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  min-height: 100svh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  padding:
+    45px
+    30px
+    88px;
+
+}
+
+
+/* =========================================================
+   HOMEPAGE BACKGROUND
+   ========================================================= */
+
+#sikomang-home::before {
+
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -3;
+
+  background-image:
+    url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLcTNtQKGooM-GZeOCZV6aYxMw1UPsEujV1jWICkZ5WsKg4z4r6TThKshwBI06eh5rbtKVfD6-RU9kz6GqU1yBbiKgIf2Dja5ARjpQh0diacx_PJIHMOKNsjF2GX14XIACuK6lQkVFhbc65BNjcQTYDssGGGKvvS9Fx-aCcH54HbqoyEvVx70IqmcbOYk/s1600/1%20%281%29.png');
+
+  background-position:
+    center center;
+
+  background-size:
+    cover;
+
+  background-repeat:
+    no-repeat;
+
+  transform:
+    scale(1.03);
+
+}
+
+
+/* =========================================================
+   HOMEPAGE OVERLAY
+   ========================================================= */
+
+#sikomang-home::after {
+
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -2;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.96) 0%,
+      rgba(255,255,255,.91) 38%,
+      rgba(255,255,255,.70) 68%,
+      rgba(255,255,255,.42) 100%
+    );
+
+}
+
+
+/* =========================================================
+   HOMEPAGE INNER
+   ========================================================= */
+
+.sikomang-inner {
+
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+}
+
+
+/* =========================================================
+   HOMEPAGE CONTENT
+   ========================================================= */
+
+.sikomang-content {
+
+  width: 100%;
+
+  max-width: 650px;
+
+  text-align: left;
+
+}
+
+
+/* =========================================================
+   LOGO GROUP
+   ========================================================= */
+
+.sikomang-logo-group {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin:
+    0
+    0
+    21px;
+
+}
+
+.sikomang-logo-karangasem {
+
+  display: block;
+
+  width: 75px;
+
+  height: 70px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 5px 10px
+      rgba(0,0,0,.13)
+    );
+
+}
+
+.sikomang-logo {
+
+  display: block;
+
+  width: 75px;
+
+  height: 75px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 7px 15px
+      rgba(0,0,0,.16)
+    );
+
+}
+
+
+/* =========================================================
+   SIKOMANG VISUAL ENHANCEMENTS
+   Glow logo + AI buttons + interactive floating logo
+   ========================================================= */
+
+@keyframes sikomangLogoGlow {
+  0%, 100% {
+    filter:
+      drop-shadow(0 4px 8px rgba(7,54,83,.12))
+      drop-shadow(0 0 0 rgba(18,101,142,0));
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    filter:
+      drop-shadow(0 6px 13px rgba(7,54,83,.18))
+      drop-shadow(0 0 13px rgba(18,101,142,.34));
+    transform: translateY(-2px) scale(1.015);
+  }
+}
+
+@keyframes sikomangAiSweep {
+  0% {
+    transform: translateX(-135%) skewX(-18deg);
+    opacity: 0;
+  }
+  18% {
+    opacity: .75;
+  }
+  48% {
+    opacity: .95;
+  }
+  70%, 100% {
+    transform: translateX(220%) skewX(-18deg);
+    opacity: 0;
+  }
+}
+
+@keyframes sikomangAiPulse {
+  0%, 100% {
+    box-shadow:
+      0 5px 15px rgba(7,54,83,.08),
+      0 0 0 rgba(18,101,142,0);
+  }
+  50% {
+    box-shadow:
+      0 8px 20px rgba(7,54,83,.13),
+      0 0 16px rgba(18,101,142,.20);
+  }
+}
+
+@keyframes sikomangOpenPulse {
+  0%, 100% {
+    box-shadow:
+      0 10px 25px rgba(7,54,83,.25),
+      0 0 0 rgba(18,101,142,0);
+  }
+  50% {
+    box-shadow:
+      0 13px 30px rgba(7,54,83,.30),
+      0 0 22px rgba(18,101,142,.34);
+  }
+}
+
+@keyframes sikomangArrowFloat {
+  0%, 100% { transform: translate(0,0); }
+  50% { transform: translate(2px,-2px); }
+}
+
+@keyframes sikomangFloating {
+  0%, 100% {
+    transform: translate3d(0,0,0) rotate(-2deg);
+  }
+  50% {
+    transform: translate3d(0,-9px,0) rotate(2deg);
+  }
+}
+
+.sikomang-logo-karangasem,
+.sikomang-logo {
+  position: relative;
+  animation: sikomangLogoGlow 4.8s ease-in-out infinite;
+  will-change: transform, filter;
+}
+
+.sikomang-logo {
+  animation-delay: .7s;
+}
+
+/* AI-style treatment for PANDUAN / TABEL KONVERSI JP / DOKUMENTASI */
+.sikomang-top-link {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  animation: sikomangAiPulse 3.8s ease-in-out infinite;
+  will-change: transform, box-shadow;
+}
+
+.sikomang-top-link::before {
+  content: '';
+  position: absolute;
+  top: -35%;
+  bottom: -35%;
+  left: 0;
+  width: 28%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.32),
+      rgba(255,255,255,.58),
+      transparent
+    );
+
+  transform: translateX(-145%) skewX(-18deg);
+  animation: sikomangAiSweep 4.8s ease-in-out infinite;
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sikomang-top-link {
+  isolation: isolate;
+}
+
+.sikomang-top-link > * {
+  position: relative;
+  z-index: 2;
+}
+
+.sikomang-top-link:nth-child(2)::before {
+  animation-delay: 1.35s;
+}
+
+.sikomang-top-link:nth-child(3)::before {
+  animation-delay: 2.7s;
+}
+
+
+/* Animated BUKA SIKOMANG */
+.sikomang-primary {
+  overflow: hidden;
+  isolation: isolate;
+  animation: sikomangOpenPulse 3.2s ease-in-out infinite;
+  will-change: transform, box-shadow;
+}
+
+.sikomang-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 28%;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.48),
+      transparent
+    );
+  transform: translateX(-180%) skewX(-18deg);
+  animation: sikomangAiSweep 4.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.sikomang-primary:hover {
+  animation: none;
+}
+
+/* =========================================================
+   EXTERNAL LEARNING PLATFORMS — HOMEPAGE MOCKUP
+   ========================================================= */
+.sikomang-learning-info {
+  margin: 26px 0 14px;
+  max-width: 780px;
+  color: #16528a;
+  font-size: 13px;
+  line-height: 1.55;
+  font-weight: 600;
+  letter-spacing: .05px;
+}
+
+.sikomang-learning-info::before {
+  content: 'ⓘ';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 9px;
+  border-radius: 50%;
+  color: #fff;
+  background: #1265a0;
+  font-size: 12px;
+  font-weight: 800;
+  vertical-align: -2px;
+  box-shadow: 0 4px 10px rgba(18,101,160,.20);
+}
+
+/* =========================================================
+   LEARNING INFO — CLEAN ALIGNMENT / NO GLYPH ARTIFACT
+   ========================================================= */
+.sikomang-learning-info {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 8px !important;
+  width: 100% !important;
+  max-width: 780px !important;
+  margin: 20px 0 10px !important;
+  padding: 0 !important;
+  color: #16528a !important;
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+}
+
+.sikomang-learning-info::before {
+  content: 'i' !important;
+  flex: 0 0 19px !important;
+  width: 19px !important;
+  height: 19px !important;
+  margin: 1px 0 0 !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  background: #1265a0 !important;
+  color: #fff !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 19px !important;
+  vertical-align: middle !important;
+  box-shadow: 0 3px 9px rgba(18,101,160,.18) !important;
+  content-visibility: visible !important;
+}
+
+.sikomang-learning-info::after {
+  content: none !important;
+  display: none !important;
+}
+
+.sikomang-external-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 860px;
+  margin-top: 6px;
+  align-items: stretch;
+}
+
+@keyframes sikomangExternalFloat {
+  0%, 100% { transform: translate3d(0,0,0); }
+  50% { transform: translate3d(0,-7px,0); }
+}
+
+.sikomang-external-link {
+  position: relative;
+  min-height: 184px;
+  padding: 38px 18px 17px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  border: 1px solid rgba(18,101,160,.16);
+  border-radius: 22px;
+  background: rgba(255,255,255,.84);
+  color: var(--navy) !important;
+  text-decoration: none !important;
+  box-shadow:
+    0 12px 30px rgba(7,54,83,.10),
+    0 0 22px rgba(46,154,210,.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+  animation: sikomangExternalFloat 4.8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.sikomang-external-link:nth-child(2) { animation-delay: 1.0s; }
+.sikomang-external-link:nth-child(3) { animation-delay: 2.0s; }
+
+.sikomang-external-link:hover {
+  transform: translateY(-7px) !important;
+  background: rgba(255,255,255,.96);
+  box-shadow:
+    0 18px 38px rgba(7,54,83,.16),
+    0 0 28px rgba(46,154,210,.16);
+}
+
+.sikomang-external-logo-wrap {
+  position: absolute;
+  top: -38px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,.96);
+  border: 4px solid rgba(255,255,255,.95);
+  box-shadow:
+    0 8px 22px rgba(18,101,160,.18),
+    0 0 22px rgba(71,177,232,.28);
+  overflow: hidden;
+}
+
+.sikomang-external-logo {
+  width: 74px;
+  height: 74px;
+  object-fit: contain;
+  border-radius: 50%;
+  padding: 7px;
+  background: #fff;
+}
+
+.sikomang-kms-mark {
+  width: 74px;
+  height: 74px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(145deg,#ffffff,#eef8ff);
+  color: #1265a0;
+  font-weight: 900;
+  line-height: .9;
+  letter-spacing: -.6px;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.sikomang-kms-mark strong {
+  font-size: 23px;
+}
+
+.sikomang-kms-mark span {
+  margin-top: 4px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #d83f87;
+}
+
+.sikomang-external-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.15;
+}
+
+.sikomang-external-name {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: .1px;
+}
+
+.sikomang-external-caption {
+  margin-top: 6px;
+  color: rgba(32,56,71,.62);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.sikomang-external-open {
+  margin-top: 12px;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(18,101,160,.25);
+  color: #1265a0;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* Privacy + Terms remain plain transparent links in lower-right. */
+.sikomang-secondary-row {
+  position: fixed;
+  left: auto !important;
+  right: 94px !important;
+  bottom: 14px !important;
+  z-index: 80;
+  width: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end !important;
+  gap: 2px;
+  padding: 2px 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  pointer-events: none;
+}
+
+.sikomang-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: auto;
+  padding: 2px 6px !important;
+  border: 0 !important;
+  border-radius: 0;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: rgba(32,56,71,.72) !important;
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: auto;
+  transition: color .2s ease, transform .2s ease;
+}
+
+.sikomang-secondary:hover {
+  background: transparent !important;
+  color: var(--navy) !important;
+  transform: translateY(-1px);
+  box-shadow: none !important;
+}
+
+/* Interactive floating SIKOMANG logo — disabled */
+.sikomang-floating-logo {
+  display: none !important;
+}
+
+/* Legacy floating-logo rules retained below for baseline compatibility */
+.sikomang-floating-logo {
+  position: fixed;
+  right: 24px;
+  bottom: 76px;
+  z-index: 90;
+  width: 66px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%,rgba(255,255,255,.96),rgba(255,255,255,.74) 55%,rgba(255,255,255,.48));
+  border: 1px solid rgba(255,255,255,.72);
+  box-shadow: 0 10px 25px rgba(7,54,83,.18),0 0 22px rgba(18,101,142,.16);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  animation: sikomangFloating 4.8s ease-in-out infinite;
+  cursor: pointer;
+  transition: transform .25s ease, box-shadow .25s ease, width .25s ease, height .25s ease;
+}
+
+.sikomang-floating-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(7,54,83,.16)) drop-shadow(0 0 9px rgba(18,101,142,.25));
+}
+
+.sikomang-floating-logo:hover {
+  animation: none;
+  transform: translateY(-5px) scale(1.08) rotate(3deg);
+  box-shadow: 0 15px 32px rgba(7,54,83,.24),0 0 30px rgba(18,101,142,.30);
+}
+
+.sikomang-floating-logo:active { transform: scale(.96); }
+
+.sikomang-floating-logo::after {
+  content: 'SIKOMANG';
+  position: absolute;
+  right: 72px;
+  bottom: 18px;
+  padding: 5px 8px;
+  border-radius: 7px;
+  background: rgba(7,54,83,.90);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .35px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(5px);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.sikomang-floating-logo:hover::after { opacity: 1; transform: translateX(0); }
+
+/* =========================================================
+   ELEGANT TYPING EFFECT — SIKOMANG nv
+   ========================================================= */
+@keyframes sikomangTitleTypingLoop {
+  0% { width: 0; }
+  16.06% { width: 100%; }
+  84.86% { width: 100%; }
+  96.33% { width: 0; }
+  100% { width: 0; }
+}
+
+@keyframes sikomangTitleCaretLoop {
+  0%, 16.06% { border-color: rgba(18,101,142,.72); }
+  16.06%, 84.86% { border-color: transparent; }
+  84.86%, 96.33% { border-color: rgba(18,101,142,.72); }
+  96.33%, 100% { border-color: transparent; }
+}
+
+.sikomang-title {
+  display: inline-block;
+  width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid rgba(18,101,142,.72);
+  padding-right: 4px;
+  animation:
+    sikomangTitleTypingLoop 21.8s cubic-bezier(.65,0,.35,1) .35s infinite,
+    sikomangTitleCaretLoop 21.8s linear .35s infinite;
+}
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.sikomang-title {
+
+  margin: 0;
+
+  padding: 0;
+
+  color: var(--navy);
+
+  font-size:
+    clamp(
+      40px,
+      7vw,
+      60px
+    );
+
+  line-height: .94;
+
+  font-weight: 800;
+
+  letter-spacing: -3px;
+
+}
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.sikomang-subtitle {
+
+  margin-top: 10px;
+
+  max-width: 620px;
+
+  color: var(--blue);
+
+  font-size:
+    clamp(
+      10px,
+      3vw,
+      14px
+    );
+
+  line-height: 1.3;
+
+  font-weight: 600;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.sikomang-description {
+
+  max-width: 590px;
+
+  margin:
+    16px
+    0
+    0;
+
+  color: #344d5e;
+
+  font-size:
+    clamp(
+      11px,
+      1.5vw,
+      13px
+    );
+
+  line-height: 1.75;
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.sikomang-navigation {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-top: 30px;
+
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.sikomang-primary {
+
+  position: relative;
+
+  z-index: 50;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  width: 235px;
+
+  min-height: 54px;
+
+  padding:
+    0
+    22px;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #073653,
+      #12658e
+    );
+
+  color: #ffffff !important;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  letter-spacing: .45px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0
+    10px
+    25px
+    rgba(7,54,83,.25);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    filter .2s ease;
+
+}
+
+.sikomang-primary:hover {
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0
+    15px
+    32px
+    rgba(7,54,83,.32);
+
+  filter:
+    brightness(1.05);
+
+}
+
+
+/* =========================================================
+   BUTTON ARROW
+   ========================================================= */
+
+.sikomang-arrow {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 25px;
+
+  height: 25px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,.16);
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  animation: sikomangArrowFloat 1.5s ease-in-out infinite;
+
+  will-change: transform;
+
+}
+
+
+/* =========================================================
+   SECONDARY BUTTONS
+   ========================================================= */
+
+.sikomang-secondary-row {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  flex-wrap: wrap;
+
+}
+
+.sikomang-secondary {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 44px;
+
+  padding:
+    0
+    20px;
+
+  border:
+    1px solid
+    rgba(7,54,83,.20);
+
+  border-radius: 12px;
+
+  background:
+    rgba(255,255,255,.78);
+
+  backdrop-filter:
+    blur(8px);
+
+  -webkit-backdrop-filter:
+    blur(8px);
+
+  color:
+    var(--navy) !important;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  box-shadow:
+    0
+    5px
+    15px
+    rgba(7,54,83,.07);
+
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    box-shadow .2s ease;
+
+}
+
+.sikomang-secondary:hover {
+
+  background:
+    rgba(255,255,255,.96);
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0
+    8px
+    20px
+    rgba(7,54,83,.12);
+
+}
+
+
+/* =========================================================
+   PRIVACY / TERMS — FULLY TRANSPARENT
+   ========================================================= */
+.sikomang-secondary-row,
+.sikomang-secondary-row::before,
+.sikomang-secondary-row::after,
+.sikomang-secondary,
+.sikomang-secondary::before,
+.sikomang-secondary::after {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* =========================================================
+   HOMEPAGE FOOTER
+   ========================================================= */
+
+.sikomang-footer {
+
+  position: fixed;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  z-index: 30;
+
+  padding:
+    14px
+    20px
+    18px;
+
+  text-align: center;
+
+  color:
+    rgba(32,56,71,.75);
+
+  font-size: 10px;
+
+  letter-spacing: .35px;
+
+  font-weight: 500;
+
+  background:
+    rgba(255,255,255,.78);
+
+  backdrop-filter:
+    blur(9px);
+
+  -webkit-backdrop-filter:
+    blur(9px);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE VISUAL ENHANCEMENTS
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .sikomang-top-navigation {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .sikomang-top-link {
+    min-height: 34px;
+    padding: 0 10px;
+    font-size: 9px;
+  }
+
+  .sikomang-floating-logo {
+    right: 14px;
+    bottom: 72px;
+    width: 54px;
+    height: 54px;
+  }
+
+  .sikomang-floating-logo::after {
+    display: none;
+  }
+
+  .sikomang-title {
+    max-width: calc(100vw - 34px);
+    font-size: clamp(40px, 14vw, 58px);
+    letter-spacing: -2.2px;
+  }
+
+  .sikomang-external-row {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 7px;
+    margin-top: 3px;
+  }
+
+  .sikomang-external-link {
+    min-height: 38px;
+    padding: 4px 8px 4px 5px;
+    border-radius: 10px;
+    gap: 6px;
+  }
+
+  .sikomang-external-logo {
+    width: 26px;
+    height: 26px;
+    flex-basis: 26px;
+  }
+
+  .sikomang-external-name {
+    font-size: 9px;
+  }
+
+  .sikomang-external-caption {
+    display: none;
+  }
+
+  .sikomang-secondary-row {
+    bottom: 46px;
+    gap: 2px;
+    padding: 2px 5px;
+  }
+
+  .sikomang-secondary {
+    font-size: 9px;
+    padding: 2px 5px;
+  }
+}
+
+@media (max-width: 760px) {
+  .sikomang-learning-info {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .sikomang-learning-info::before {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    font-size: 10px;
+  }
+
+  .sikomang-external-row {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    max-width: 330px;
+    margin: 30px auto 0;
+  }
+
+  .sikomang-external-link {
+    min-height: 145px;
+    padding: 34px 14px 13px;
+    border-radius: 20px;
+  }
+
+  .sikomang-external-logo-wrap {
+    width: 76px;
+    height: 76px;
+    top: -31px;
+  }
+
+  .sikomang-external-logo,
+  .sikomang-kms-mark {
+    width: 61px;
+    height: 61px;
+  }
+
+  .sikomang-kms-mark strong { font-size: 19px; }
+  .sikomang-kms-mark span { font-size: 8px; }
+  .sikomang-external-name { font-size: 14px; }
+  .sikomang-external-caption { font-size: 10px; margin-top: 5px; }
+  .sikomang-external-open { margin-top: 8px; width: 25px; height: 25px; font-size: 15px; }
+
+  .sikomang-secondary-row {
+    right: 14px !important;
+    bottom: 12px !important;
+  }
+
+  .sikomang-secondary {
+    font-size: 8px !important;
+    padding: 2px 4px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sikomang-logo-karangasem,
+  .sikomang-logo,
+  .sikomang-top-link,
+  .sikomang-top-link::before,
+  .sikomang-top-link::after,
+  .sikomang-primary,
+  .sikomang-primary::before,
+  .sikomang-arrow {
+    animation: none !important;
+  }
+
+  /* Tetap pertahankan floating logo di HP agar tombol akses SIKOMANG
+     tetap hidup secara visual. */
+  .sikomang-floating-logo {
+    animation: sikomangFloating 4.8s ease-in-out infinite !important;
+  }
+
+  .sikomang-external-link {
+    animation: sikomangExternalFloat 4.8s ease-in-out infinite !important;
+  }
+}
+
+/* =========================================================
+   FINAL V3.6 HOMEPAGE MOCKUP OVERRIDES
+   ========================================================= */
+.sikomang-learning-info {
+  display: block !important;
+  max-width: 780px !important;
+  margin: 26px 0 14px !important;
+  color: #16528a !important;
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+  font-weight: 600 !important;
+}
+
+.sikomang-external-row {
+  display: grid !important;
+  grid-template-columns: repeat(3,minmax(0,1fr)) !important;
+  gap: 24px !important;
+  width: 100% !important;
+  max-width: 860px !important;
+  margin: 6px 0 0 !important;
+  align-items: stretch !important;
+}
+
+.sikomang-external-link {
+  position: relative !important;
+  display: flex !important;
+  min-height: 184px !important;
+  padding: 38px 18px 17px !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  text-align: center !important;
+  border: 1px solid rgba(18,101,160,.16) !important;
+  border-radius: 22px !important;
+  background: rgba(255,255,255,.84) !important;
+  box-shadow: 0 12px 30px rgba(7,54,83,.10),0 0 22px rgba(46,154,210,.08) !important;
+  animation: sikomangExternalFloat 4.8s ease-in-out infinite !important;
+  overflow: visible !important;
+}
+
+.sikomang-external-link:nth-child(2) { animation-delay: 1s !important; }
+.sikomang-external-link:nth-child(3) { animation-delay: 2s !important; }
+
+.sikomang-external-link:hover {
+  transform: translateY(-7px) !important;
+  background: rgba(255,255,255,.96) !important;
+  box-shadow: 0 18px 38px rgba(7,54,83,.16),0 0 28px rgba(46,154,210,.16) !important;
+}
+
+.sikomang-external-logo-wrap {
+  position: absolute !important;
+  top: -38px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 92px !important;
+  height: 92px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  background: rgba(255,255,255,.96) !important;
+  border: 4px solid rgba(255,255,255,.95) !important;
+  box-shadow: 0 8px 22px rgba(18,101,160,.18),0 0 22px rgba(71,177,232,.28) !important;
+  overflow: hidden !important;
+}
+
+.sikomang-external-logo,
+.sikomang-kms-mark {
+  width: 74px !important;
+  height: 74px !important;
+}
+
+.sikomang-external-logo {
+  object-fit: contain !important;
+  border-radius: 50% !important;
+  padding: 7px !important;
+  background: #fff !important;
+}
+
+.sikomang-kms-mark {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  background: linear-gradient(145deg,#ffffff,#eef8ff) !important;
+  color: #1265a0 !important;
+  font-weight: 900 !important;
+  line-height: .9 !important;
+}
+
+.sikomang-external-text {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  line-height: 1.15 !important;
+  text-align: center !important;
+}
+
+.sikomang-external-name {
+  font-size: 16px !important;
+  font-weight: 800 !important;
+}
+
+.sikomang-external-caption {
+  display: block !important;
+  margin-top: 6px !important;
+  font-size: 11px !important;
+}
+
+.sikomang-external-open {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 28px !important;
+  height: 28px !important;
+  margin-top: 12px !important;
+  border: 1px solid rgba(18,101,160,.25) !important;
+  border-radius: 50% !important;
+  color: #1265a0 !important;
+  font-size: 17px !important;
+}
+
+.sikomang-secondary-row {
+  position: fixed !important;
+  left: auto !important;
+  right: 94px !important;
+  bottom: 14px !important;
+  width: auto !important;
+  z-index: 80 !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  gap: 2px !important;
+  padding: 2px 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.sikomang-secondary {
+  min-height: auto !important;
+  padding: 2px 6px !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  color: rgba(32,56,71,.72) !important;
+  font-size: 10px !important;
+}
+
+@media (max-width:760px) {
+  .sikomang-learning-info {
+    margin: 20px 0 12px !important;
+    font-size: 11px !important;
+  }
+
+  .sikomang-external-row {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    max-width: 330px !important;
+    margin: 30px auto 0 !important;
+  }
+
+  .sikomang-external-link {
+    min-height: 145px !important;
+    padding: 34px 14px 13px !important;
+    border-radius: 20px !important;
+  }
+
+  .sikomang-external-logo-wrap {
+    top: -31px !important;
+    width: 76px !important;
+    height: 76px !important;
+  }
+
+  .sikomang-external-logo,
+  .sikomang-kms-mark {
+    width: 61px !important;
+    height: 61px !important;
+  }
+
+  .sikomang-external-name { font-size: 14px !important; }
+  .sikomang-external-caption { font-size: 10px !important; }
+  .sikomang-external-open { width: 25px !important; height: 25px !important; margin-top: 8px !important; font-size: 15px !important; }
+
+  .sikomang-secondary-row {
+    right: 10px !important;
+    bottom: 46px !important;
+    width: auto !important;
+    max-width: calc(100% - 20px) !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 1px !important;
+    padding: 2px 0 !important;
+    z-index: 81 !important;
+  }
+
+  .sikomang-secondary {
+    font-size: 8px !important;
+    line-height: 1.2 !important;
+    padding: 2px 4px !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* =========================================================
+   FINAL V3.7 — EXTERNAL LINKS MINI-BUTTONS
+   ========================================================= */
+.sikomang-learning-info {
+  display: block !important;
+  width: 100% !important;
+  max-width: 720px !important;
+  margin: 20px 0 10px !important;
+  color: #16528a !important;
+  font-size: 12.5px !important;
+  line-height: 1.5 !important;
+  font-weight: 600 !important;
+  letter-spacing: .02px !important;
+}
+
+.sikomang-learning-info::before {
+  width: 19px !important;
+  height: 19px !important;
+  margin-right: 7px !important;
+  font-size: 11px !important;
+  vertical-align: -3px !important;
+}
+
+.sikomang-external-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 9px !important;
+  width: 100% !important;
+  max-width: 720px !important;
+  margin: 8px 0 0 !important;
+}
+
+.sikomang-external-link {
+  position: relative !important;
+  display: inline-flex !important;
+  flex: 0 0 auto !important;
+  width: auto !important;
+  min-height: 46px !important;
+  padding: 5px 11px 5px 6px !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 8px !important;
+  text-align: left !important;
+  border: 1px solid rgba(18,101,160,.14) !important;
+  border-radius: 14px !important;
+  background: rgba(255,255,255,.72) !important;
+  color: var(--navy) !important;
+  text-decoration: none !important;
+  box-shadow: 0 6px 16px rgba(7,54,83,.08) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  transition: transform .22s ease, box-shadow .22s ease, background .22s ease !important;
+  animation: sikomangExternalFloat 5.2s ease-in-out infinite !important;
+  will-change: transform !important;
+}
+
+.sikomang-external-link:nth-child(2) { animation-delay: .9s !important; }
+.sikomang-external-link:nth-child(3) { animation-delay: 1.8s !important; }
+
+.sikomang-external-link:hover {
+  transform: translateY(-4px) !important;
+  background: rgba(255,255,255,.92) !important;
+  box-shadow: 0 10px 22px rgba(7,54,83,.13) !important;
+}
+
+.sikomang-external-logo-wrap {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  flex: 0 0 34px !important;
+  width: 34px !important;
+  height: 34px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  background: rgba(255,255,255,.94) !important;
+  border: 2px solid rgba(255,255,255,.95) !important;
+  box-shadow: 0 3px 10px rgba(18,101,160,.13) !important;
+  overflow: hidden !important;
+}
+
+.sikomang-external-logo {
+  width: 27px !important;
+  height: 27px !important;
+  padding: 3px !important;
+  object-fit: contain !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+}
+
+.sikomang-kms-mark {
+  width: 27px !important;
+  height: 27px !important;
+  border-radius: 50% !important;
+}
+
+.sikomang-kms-mark strong { font-size: 8px !important; }
+.sikomang-kms-mark span { margin-top: 2px !important; font-size: 4px !important; letter-spacing: .6px !important; }
+
+.sikomang-external-text {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  line-height: 1.1 !important;
+  min-width: 0 !important;
+}
+
+.sikomang-external-name {
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  white-space: nowrap !important;
+}
+
+.sikomang-external-caption {
+  display: block !important;
+  margin-top: 2px !important;
+  color: rgba(32,56,71,.58) !important;
+  font-size: 8.5px !important;
+  font-weight: 500 !important;
+  white-space: nowrap !important;
+}
+
+.sikomang-external-open {
+  flex: 0 0 20px !important;
+  width: 20px !important;
+  height: 20px !important;
+  margin: 0 0 0 2px !important;
+  border: 1px solid rgba(18,101,160,.20) !important;
+  border-radius: 50% !important;
+  color: #1265a0 !important;
+  font-size: 12px !important;
+}
+
+@media (max-width:760px) {
+  .sikomang-learning-info {
+    max-width: 100% !important;
+    margin: 18px 0 9px !important;
+    font-size: 10.5px !important;
+    line-height: 1.45 !important;
+  }
+
+  .sikomang-learning-info::before {
+    width: 17px !important;
+    height: 17px !important;
+    margin-right: 5px !important;
+    font-size: 9px !important;
+  }
+
+  .sikomang-external-row {
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
+    max-width: 100% !important;
+    margin-top: 7px !important;
+  }
+
+  .sikomang-external-link {
+    min-height: 38px !important;
+    padding: 4px 7px 4px 4px !important;
+    gap: 5px !important;
+    border-radius: 11px !important;
+  }
+
+  .sikomang-external-logo-wrap {
+    flex-basis: 27px !important;
+    width: 27px !important;
+    height: 27px !important;
+    border-width: 1.5px !important;
+  }
+
+  .sikomang-external-logo {
+    width: 21px !important;
+    height: 21px !important;
+    padding: 2px !important;
+  }
+
+  .sikomang-kms-mark { width: 21px !important; height: 21px !important; }
+  .sikomang-kms-mark strong { font-size: 6px !important; }
+  .sikomang-kms-mark span { font-size: 3px !important; }
+  .sikomang-external-name { font-size: 8px !important; }
+  .sikomang-external-caption { display: none !important; }
+  .sikomang-external-open { display: none !important; }
+}
+
+@media (max-width:760px) {
+  .sikomang-learning-info {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+    margin: 16px 0 8px !important;
+    font-size: 10.5px !important;
+    line-height: 1.42 !important;
+  }
+
+  .sikomang-learning-info::before {
+    flex-basis: 16px !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-top: 1px !important;
+    font-size: 10px !important;
+    line-height: 16px !important;
+  }
+}
+
+/* =========================================================
+   STATIC PAGE
+   ========================================================= */
+
+.sikomang-static-page {
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  min-height: 100svh;
+
+  margin: 0;
+
+  padding: 0;
+
+  background: #ffffff;
+
+  overflow-x: hidden;
+
+}
+
+.sikomang-static-container {
+
+  width: 100%;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding:
+    35px
+    20px
+    60px;
+
+}
+
+.sikomang-static-card {
+
+  width: 100%;
+
+  margin: 0;
+
+  padding: 0;
+
+  background: #ffffff;
+
+  border: 0;
+
+  border-radius: 0;
+
+  box-shadow: none;
+
+  overflow: visible;
+
+}
+
+.sikomang-static-content {
+
+  width: 100%;
+
+  margin: 0;
+
+  padding: 0;
+
+}
